@@ -1,0 +1,132 @@
+<apex:page controller="FlowController" sidebar="false">
+
+<center><div class="outer shrink">
+<flow:interview name="flow_1" interview="{!myflow}" ></flow:interview></div></center>
+    <div class="outer">
+        <center>
+            <div class="myContainer">
+                var1 = {!var1}
+            </div>
+        </center>
+    </div>
+    
+    <!-- <center><apex:form ><input class="myButton" type="button" value="Save and Close" onclick="window.close()" /></apex:form></center> -->
+
+    <style>
+        .myContainer{
+            border-style:solid;
+            border-radius:7px;
+            border-width:2px;
+            padding:10px;
+            margin:auto;
+            text-align:center;
+            width:5%;
+            box-shadow: 0px 0px 7px #888888;
+            display:inline;
+            margin-right:5px;
+        }
+        
+        .outer{
+            margin-top:50px;
+            margin-bottom:50px;
+        }
+        .shrink{
+            width:25%;
+            //box-shadow: 5px 5px 10px #888888;
+            padding:0px 0px 0px 0px;
+            border-style:inset;
+            border-width:3px;
+            //border-color:blue;
+            
+          -webkit-box-shadow:
+                    0px 0px 0px 2px rgba(0,0,0,0.6),
+                        0px 0px 0px 14px #fff,
+                        0px 0px 0px 18px rgba(0,0,0,0.2),
+                        6px 6px 8px 17px #555;
+             -moz-box-shadow:
+                    0px 0px 0px 2px rgba(0,0,0,0.6),
+                        0px 0px 0px 14px #fff,
+                        0px 0px 0px 18px rgba(0,0,0,0.2),
+                        6px 6px 8px 17px #555;
+                  box-shadow:
+                    0px 0px 0px 2px rgba(0,0,0,0.6),
+                        0px 0px 0px 14px #fff,
+                        0px 0px 0px 18px rgba(0,0,0,0.2),
+                        6px 6px 8px 17px #555;
+        }       
+        .myContainer:hover{            
+            box-shadow: 2px 2px 9px red;
+            padding:15px;
+            font-size:150%;
+            font-weight: bold;
+        }
+        
+        
+        .myButton {
+    -moz-box-shadow:inset 0px 1px 0px 0px #bee2f9;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #bee2f9;
+    box-shadow:inset 0px 1px 0px 0px #bee2f9;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #63b8ee), color-stop(1, #468ccf));
+    background:-moz-linear-gradient(top, #63b8ee 5%, #468ccf 100%);
+    background:-webkit-linear-gradient(top, #63b8ee 5%, #468ccf 100%);
+    background:-o-linear-gradient(top, #63b8ee 5%, #468ccf 100%);
+    background:-ms-linear-gradient(top, #63b8ee 5%, #468ccf 100%);
+    background:linear-gradient(to bottom, #63b8ee 5%, #468ccf 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#63b8ee', endColorstr='#468ccf',GradientType=0);
+    background-color:#63b8ee;
+    -moz-border-radius:6px;
+    -webkit-border-radius:6px;
+    border-radius:6px;
+    border:1px solid #3866a3;
+    display:inline-block;
+    cursor:pointer;
+    color:#14396a;
+    font-family:arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:6px 24px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #7cacde;
+}
+.myButton:hover {
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #468ccf), color-stop(1, #63b8ee));
+    background:-moz-linear-gradient(top, #468ccf 5%, #63b8ee 100%);
+    background:-webkit-linear-gradient(top, #468ccf 5%, #63b8ee 100%);
+    background:-o-linear-gradient(top, #468ccf 5%, #63b8ee 100%);
+    background:-ms-linear-gradient(top, #468ccf 5%, #63b8ee 100%);
+    background:linear-gradient(to bottom, #468ccf 5%, #63b8ee 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#468ccf', endColorstr='#63b8ee',GradientType=0);
+    background-color:#468ccf;
+}
+.myButton:active {
+    position:relative;
+    top:1px;
+}
+
+            .brandQuaternaryFgr:hover{
+                color:#14396a;
+    font-family:arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:6px 24px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #7cacde;
+            }  
+    </style>
+    
+    <script type="text/javascript">
+    
+    document.getElementById('j_id0:j_id2:i:f:pb:pbb:next').className = 'myButton';
+var parentGuest = document.getElementById("j_id0:j_id2:i:f:pb:pbb:bottom:next");
+var childGuest = document.createElement("input");
+childGuest.type = "button";
+childGuest.id= "strunksButton";
+childGuest.value = "Strunk\'s Button";
+childGuest.className = "btn FlowNextBtn";
+childGuest.onclick = function(){alert("var1 = {!var1}")};
+parentGuest.parentNode.appendChild(childGuest);
+
+    
+    </script>
+    
+</apex:page>
